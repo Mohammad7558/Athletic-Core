@@ -1,56 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Top 5 Warm-Up Routines Before a Match',
-    date: 'June 10, 2025',
-    image: 'https://i.ibb.co/4RNYQ6GN/img-8-min.jpg',
-    category: 'Training',
-    readTime: '4 min read',
-  },
-  {
-    id: 2,
-    title: 'How to Stay Hydrated During a Marathon',
-    date: 'June 8, 2025',
-    image: 'https://i.ibb.co/G4Z8cQWb/img-3-min.jpg',
-    category: 'Nutrition',
-    readTime: '6 min read',
-  },
-  {
-    id: 3,
-    title: 'Latest News on Inter-School Sports Meet',
-    date: 'June 5, 2025',
-    image: 'https://i.ibb.co/JRpCf6mV/img-4-min.jpg',
-    category: 'News',
-    readTime: '3 min read',
-  },
-  {
-    id: 4,
-    title: 'Preventing Injuries While Playing',
-    date: 'June 3, 2025',
-    image: 'https://i.ibb.co/PGMcjKZt/img-6-min.jpg',
-    category: 'Health',
-    readTime: '5 min read',
-  },
-  {
-    id: 5,
-    title: 'Mental Health & Athletic Performance',
-    date: 'June 1, 2025',
-    image: 'https://i.ibb.co/MDZh5MqB/img-10-min.jpg',
-    category: 'Psychology',
-    readTime: '7 min read',
-  },
-  {
-    id: 6,
-    title: 'Training Schedules for Runners',
-    date: 'May 29, 2025',
-    image: 'https://i.ibb.co/F4W1pRyP/img-1.jpg',
-    category: 'Running',
-    readTime: '8 min read',
-  },
-];
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.98 },
@@ -61,7 +12,7 @@ const cardVariants = {
     transition: {
       delay: i * 0.15,
       duration: 0.6,
-      ease: [0.4, 0, 0.2, 1], // Clean, smooth easing
+      ease: [0.4, 0, 0.2, 1],
     },
   }),
 };
@@ -81,9 +32,17 @@ const titleVariants = {
 };
 
 const SportsBlogSection = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/blogs')
+      .then(res => setBlogPosts(res.data))
+      .catch(err => console.error(err));
+  }, []);
+
   return (
-    <section className="py-20 bg-white relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="lg:py-20 bg-white relative">
+      <div className="container mx-auto lg:px-0 px-6">
         {/* Section Title with Blur Animation */}
         <motion.div
           initial="hidden"
@@ -101,7 +60,7 @@ const SportsBlogSection = () => {
         </motion.div>
 
         {/* Blog Posts Grid */}
-        <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -142,7 +101,7 @@ const SportsBlogSection = () => {
                   </h3>
 
                   <div className="mt-auto">
-                    <button className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                    <Link to={`/blogs/${post.slug}`} className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
                       Read article
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +117,7 @@ const SportsBlogSection = () => {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -173,13 +132,13 @@ const SportsBlogSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-           <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-5 py-2.5 border border-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 shadow-sm cursor-pointer mt-5"
-            >
-              View All Articles
-            </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-5 py-2.5 border border-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 shadow-sm cursor-pointer mt-5"
+          >
+            View All Articles
+          </motion.button>
         </motion.div>
       </div>
     </section>

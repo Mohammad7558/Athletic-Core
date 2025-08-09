@@ -15,6 +15,7 @@ import SingleEvent from "../Pages/SingleEvent/SingleEvent";
 import Team from "../Pages/Team/Team";
 import UpdateEvent from "../Pages/UpdateEvent/UpdateEvent";
 import PrivateRoutes from "./PrivateRoutes";
+import DetailsBlog from "../Pages/SportsBlogSection/DetailsBlog";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
         Component: Team,
       },
       {
-        path: "/blog",
+        path: "/blogs",
         Component: BlogPage,
       },
       {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path:'/blogs/:slug',
+        Component: DetailsBlog
       },
       {
         path: "/add-event",

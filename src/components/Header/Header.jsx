@@ -57,7 +57,7 @@ const Header = () => {
     { to: "/all-events", icon: <FaCalendarAlt className="text-lg" />, label: "All Events" },
     { to: "/about", icon: <FaInfoCircle className="text-lg" />, label: "About Us" },
     { to: "/team", icon: <FaUsers className="text-lg" />, label: "Our Heros" },
-    { to: "/blog", icon: <FaBlog className="text-lg" />, label: "Latest Post" }
+    { to: "/blogs", icon: <FaBlog className="text-lg" />, label: "Blogs" }
   ];
 
   const dropdownItems = [
