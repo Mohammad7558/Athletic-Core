@@ -76,7 +76,7 @@ const FeaturedEvents = () => {
     <div className="" id="featured-events">
       {loading ? (
         <motion.div
-          className="flex justify-center items-center w-full"
+          className="flex justify-center h-[50vh] items-center w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

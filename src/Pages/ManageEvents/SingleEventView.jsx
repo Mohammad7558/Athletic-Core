@@ -9,7 +9,7 @@ const SingleEventView = ({ singleEvent, handleDeleteEvent }) => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 20 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-col md:flex-row w-11/12 mx-auto rounded-xl shadow-lg border border-gray-100 bg-white overflow-hidden"
+        className="flex flex-col md:flex-row container mx-auto rounded-xl shadow-lg border border-gray-100 bg-white overflow-hidden"
       >
         <div className="relative h-64 md:h-auto md:w-1/3 overflow-hidden">
           <motion.img

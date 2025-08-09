@@ -41,7 +41,7 @@ const SportsBlogSection = () => {
   }, []);
 
   return (
-    <section className="lg:py-20 bg-white relative">
+    <section className="lg:py-20 bg-white relative pb-20">
       <div className="container mx-auto lg:px-0 px-6">
         {/* Section Title with Blur Animation */}
         <motion.div

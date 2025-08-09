@@ -17,113 +17,131 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative py-16 px-4 text-center bg-gradient-to-r from-primary to-secondary text-white"
+        className="relative py-20 px-4 text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white"
       >
-        <h1 className="text-5xl font-bold mb-4">Welcome to Our Arena</h1>
-        <p className="max-w-2xl mx-auto text-lg text-white/90">
-          Your all-in-one solution for athletic event management — fast,
-          efficient, and built for athletes and organizers.
-        </p>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Welcome to Our Arena</h1>
+          <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+            Your all-in-one solution for athletic event management — fast,
+            efficient, and built for athletes and organizers.
+          </p>
+        </div>
       </motion.div>
 
       {/* Features Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-20">
+        <h2 className="text-3xl font-bold text-center mb-16 relative">
+          <span className="relative inline-block">
+            Why Choose Us
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform translate-y-5"></span>
+          </span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {[
             {
-              icon: <FaRunning />,
+              icon: <FaRunning className="w-full h-full p-3" />,
               title: "Athlete-Focused",
               desc: "Built for runners, cyclists, swimmers, and multi-sport competitors.",
             },
             {
-              icon: <FaCalendarAlt />,
+              icon: <FaCalendarAlt className="w-full h-full p-3" />,
               title: "Smart Scheduling",
               desc: "Seamlessly manage event dates, registration, and logistics.",
             },
             {
-              icon: <FaUsers />,
+              icon: <FaUsers className="w-full h-full p-3" />,
               title: "Community Hub",
               desc: "Connect clubs, athletes, and teams — all in one place.",
             },
             {
-              icon: <FaStopwatch />,
+              icon: <FaStopwatch className="w-full h-full p-3" />,
               title: "Live Timing",
               desc: "Real-time results & leaderboard updates during the event.",
             },
             {
-              icon: <FaBullseye />,
+              icon: <FaBullseye className="w-full h-full p-3" />,
               title: "Our Mission",
               desc: "To streamline and elevate the way sports events are experienced.",
             },
             {
-              icon: <FaEye />,
+              icon: <FaEye className="w-full h-full p-3" />,
               title: "Our Vision",
               desc: "A future where every athletic event is easy to run and fun to join.",
             },
           ].map((feature, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="bg-base-200 p-6 rounded-2xl shadow-lg text-center transition-shadow"
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100"
             >
-              <div className="text-4xl text-primary mb-4 mx-auto">
-                {feature.icon}
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+                  {feature.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.desc}</p>
+              <h3 className="text-xl font-bold mb-3 text-center text-gray-800">{feature.title}</h3>
+              <p className="text-gray-600 text-center">{feature.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
 
       {/* Timeline / Journey */}
-      <div className="bg-gray-100 py-16 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-          Our Journey
-        </h2>
-        <div className="max-w-4xl mx-auto">
-          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            <li>
-              <div className="timeline-middle bg-primary text-white p-2 rounded-full">
-                🏁
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <h3 className="text-lg font-bold">2022 – The Beginning</h3>
-                <p>Idea born to simplify local race registrations & timing.</p>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle bg-primary text-white p-2 rounded-full">
-                🚀
-              </div>
-              <div className="timeline-end mb-10">
-                <h3 className="text-lg font-bold">2023 – Platform Launch</h3>
-                <p>Launched MVP used by 20+ events across 3 cities.</p>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle bg-primary text-white p-2 rounded-full">
-                🌐
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <h3 className="text-lg font-bold">2024 – Global Expansion</h3>
-                <p>Serving 100+ events with real-time features & support.</p>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle bg-primary text-white p-2 rounded-full">
-                🏆
-              </div>
-              <div className="timeline-end mb-10">
-                <h3 className="text-lg font-bold">Today & Beyond</h3>
-                <p>Constantly improving — with you on the track.</p>
-              </div>
-            </li>
-          </ul>
+      <div className="bg-gray-50 py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-16 relative">
+            <span className="relative inline-block">
+              Our Journey
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform translate-y-5"></span>
+            </span>
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+              <li>
+                <div className="timeline-middle bg-blue-600 text-white p-3 rounded-full">
+                  🏁
+                </div>
+                <div className="timeline-start md:text-end mb-10">
+                  <time className="font-bold text-blue-600">2022</time>
+                  <h3 className="text-xl font-bold text-gray-800 mt-1">The Beginning</h3>
+                  <p className="text-gray-600">Idea born to simplify local race registrations & timing.</p>
+                </div>
+                <hr className="bg-blue-200" />
+              </li>
+              <li>
+                <div className="timeline-middle bg-blue-600 text-white p-3 rounded-full">
+                  🚀
+                </div>
+                <div className="timeline-end mb-10">
+                  <time className="font-bold text-blue-600">2023</time>
+                  <h3 className="text-xl font-bold text-gray-800 mt-1">Platform Launch</h3>
+                  <p className="text-gray-600">Launched MVP used by 20+ events across 3 cities.</p>
+                </div>
+                <hr className="bg-blue-200" />
+              </li>
+              <li>
+                <div className="timeline-middle bg-blue-600 text-white p-3 rounded-full">
+                  🌐
+                </div>
+                <div className="timeline-start md:text-end mb-10">
+                  <time className="font-bold text-blue-600">2024</time>
+                  <h3 className="text-xl font-bold text-gray-800 mt-1">Global Expansion</h3>
+                  <p className="text-gray-600">Serving 100+ events with real-time features & support.</p>
+                </div>
+                <hr className="bg-blue-200" />
+              </li>
+              <li>
+                <div className="timeline-middle bg-blue-600 text-white p-3 rounded-full">
+                  🏆
+                </div>
+                <div className="timeline-end mb-10">
+                  <time className="font-bold text-blue-600">Today</time>
+                  <h3 className="text-xl font-bold text-gray-800 mt-1">The Future</h3>
+                  <p className="text-gray-600">Constantly improving — with you on the track.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -132,15 +150,24 @@ const AboutUs = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         initial={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.4 }}
-        className="text-center py-16 px-4"
+        className="text-center py-20 px-4 bg-gradient-to-r from-blue-50 to-white"
       >
-        <h2 className="text-3xl font-bold mb-4 text-primary">
-          Join the Movement
-        </h2>
-        <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-          Be part of the revolution in athletic event management. Host, join, or follow events like never before.
-        </p>
-        <button className="btn btn-primary btn-wide">Explore Events</button>
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-blue-600">
+            Join the Movement
+          </h2>
+          <p className="text-gray-600 mb-8 text-lg">
+            Be part of the revolution in athletic event management. Host, join, or follow events like never before.
+          </p>
+          <div className="flex justify-center gap-4">
+            <button className="btn btn-primary px-8 py-3 text-lg font-semibold rounded-lg">
+              Explore Events
+            </button>
+            <button className="btn btn-outline btn-primary px-8 py-3 text-lg font-semibold rounded-lg">
+              Learn More
+            </button>
+          </div>
+        </div>
       </motion.div>
     </div>
   );

@@ -77,7 +77,7 @@ const AllEvents = () => {
   }, [searchTerm]);
 
   return (
-    <div className="mx-auto px-4 sm:px-6 py-8 max-w-7xl min-h-screen">
+    <div className="mx-auto lg:px-0 px-4 sm:px-6 py-8 container min-h-screen my-10">
       <div className="mb-10 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -214,7 +214,7 @@ const AllEvents = () => {
         </motion.div>
       ) : (
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

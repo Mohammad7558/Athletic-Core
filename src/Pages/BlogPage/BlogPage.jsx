@@ -56,7 +56,7 @@ const BlogPage = () => {
           variants={titleVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight lg:pt-0 pt-10">
             Latest News & Blogs
           </h2>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
