@@ -18,7 +18,7 @@ const slides = [
   {
     id: 3,
     title: "Team & Athlete Support",
-    description: "We deliver tailored support for athletes and teams, ensuring peak performance and a smooth competitive journey.",
+    description: "We deliver expert support to athletes and teams, helping them perform at their best while navigating every step of their competitive journey with confidence.",
     image: "https://i.ibb.co/1G6vrytm/img-5-min.jpg",
   },
 ];

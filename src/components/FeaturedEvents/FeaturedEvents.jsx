@@ -172,7 +172,7 @@ const FeaturedEvents = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          <div className="container mx-auto">
+          <div className="container mx-auto pb-14">
             <motion.div
               className="text-center mb-12"
               initial="hidden"
@@ -181,7 +181,7 @@ const FeaturedEvents = () => {
               variants={container}
             >
               <motion.h2
-                className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4"
+                className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4 mt-5 lg:mt-14"
                 variants={titleAnimation}
               >
                 Featured Events

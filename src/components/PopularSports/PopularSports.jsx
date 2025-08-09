@@ -93,7 +93,7 @@ const titleVariants = {
 const PopularSports = () => {
   return (
     <section className="py-20 bg-white relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto lg:px-0 px-6">
         {/* Section Title with Blur Animation */}
         <motion.div
           initial="hidden"
@@ -143,13 +143,6 @@ const PopularSports = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-           <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-5 py-2.5 border border-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 shadow-sm cursor-pointer mt-5"
-            >
-              Explore All Activities
-            </motion.button>
         </motion.div>
       </div>
     </section>
