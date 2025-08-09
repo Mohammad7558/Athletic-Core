@@ -1,10 +1,11 @@
 # 🏅 Athletic Event Management System
 
-![Project Banner](https://github.com/Mohammad7558/Athletic-Core/blob/main/assignment-11-client-sid-64337.web.app_.png)  
+![Project Banner](https://github.com/Mohammad7558/Athletic-Core-Frontend/blob/main/localhost_5173_.png)
+
 *A full-stack platform for organizing and managing athletic events with real-time booking capabilities*
 
 ## 🌟 Live Demo
-🔗 [https://assignment-11-client-sid-64337.web.app/](https://assignment-11-client-sid-64337.web.app/)
+🔗 [(https://assignment-11-client-sid-64337.web.app/)]
 
 ---
 
@@ -115,3 +116,7 @@ http://localhost:5173
 ✅ In Firebase, enable Email/Password and Google login providers under Authentication → Sign-in method.
 
 ⚠️ If any port conflict occurs, change it in your .env or vite.config.js.
+
+https://github.com/Mohammad7558/Athletic-Core-Frontend/blob/main/localhost_5173_.png
+
+i want to show my project ss how to dot that 
