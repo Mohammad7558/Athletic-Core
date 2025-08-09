@@ -73,7 +73,7 @@ const FeaturedEvents = () => {
   };
 
   return (
-    <div className="my-20" id="featured-events">
+    <div className="" id="featured-events">
       {loading ? (
         <motion.div
           className="flex justify-center items-center w-full"
@@ -172,7 +172,7 @@ const FeaturedEvents = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto">
             <motion.div
               className="text-center mb-12"
               initial="hidden"
@@ -195,7 +195,7 @@ const FeaturedEvents = () => {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
               variants={container}
               initial="hidden"
               whileInView="visible"

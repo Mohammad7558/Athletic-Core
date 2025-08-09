@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router";
 import Loader from "../components/Loader/Loader";
 import Main from "../Layout/Main";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 import AddEvent from "../Pages/AddEvent/AddEvent";
 import AllEvents from "../Pages/AllEvents/AllEvents";
+import BlogPage from "../Pages/BlogPage/BlogPage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -10,11 +12,9 @@ import ManageEvents from "../Pages/ManageEvents/ManageEvents";
 import MyBookings from "../Pages/MyBookings/MyBookings";
 import Register from "../Pages/Register/Register";
 import SingleEvent from "../Pages/SingleEvent/SingleEvent";
+import Team from "../Pages/Team/Team";
 import UpdateEvent from "../Pages/UpdateEvent/UpdateEvent";
 import PrivateRoutes from "./PrivateRoutes";
-import AboutUs from "../Pages/AboutUs/AboutUs";
-import Team from "../Pages/Team/Team";
-import BlogPage from "../Pages/BlogPage/BlogPage";
 
 export const router = createBrowserRouter([
   {
@@ -27,16 +27,16 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: '/about',
-        Component: AboutUs
+        path: "/about",
+        Component: AboutUs,
       },
       {
-        path: '/team',
-        Component: Team
+        path: "/team",
+        Component: Team,
       },
       {
-        path: '/blog',
-        Component: BlogPage
+        path: "/blog",
+        Component: BlogPage,
       },
       {
         path: "/login",

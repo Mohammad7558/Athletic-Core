@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 const SingleFeaturedEvents = ({ singleEvent }) => {
   const {
     eventName,
-    eventType,
     eventDate,
-    location,
     description,
     imageUrl,
     _id,
@@ -21,7 +19,7 @@ const SingleFeaturedEvents = ({ singleEvent }) => {
 
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300"
+      className="group relative overflow-hidden rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300 h-full flex flex-col"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
@@ -31,7 +29,7 @@ const SingleFeaturedEvents = ({ singleEvent }) => {
       }}
     >
       {/* Image with subtle zoom effect */}
-      <div className="relative h-60 overflow-hidden">
+      <div className="relative h-60 overflow-hidden flex-shrink-0">
         <motion.img
           src={imageUrl}
           alt={eventName}
@@ -47,28 +45,14 @@ const SingleFeaturedEvents = ({ singleEvent }) => {
       </div>
 
       {/* Content area */}
-      <div className="p-5">
-        {/* Event type subtle indicator */}
-        <span className="text-xs font-medium text-indigo-600 uppercase tracking-wider">
-          {eventType}
-        </span>
-        
-        {/* Event title */}
-        <h3 className="mt-1 text-xl font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+      <div className="p-5 flex flex-col flex-grow">
+        {/* Event title with line clamp */}
+        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-2 min-h-[3.5rem]">
           {eventName}
         </h3>
         
-        {/* Location with minimalist icon */}
-        <div className="mt-2 flex items-center text-sm text-gray-500">
-          <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          {location}
-        </div>
-        
         {/* Description with subtle fade */}
-        <p className="mt-3 text-gray-600 text-sm line-clamp-2">
+        <p className="mt-3 text-gray-600 text-sm line-clamp-2 flex-grow">
           {description}
         </p>
         
@@ -77,6 +61,7 @@ const SingleFeaturedEvents = ({ singleEvent }) => {
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            className="flex-1"
           >
             <Link
               to={`/event/${_id}`}
@@ -89,6 +74,7 @@ const SingleFeaturedEvents = ({ singleEvent }) => {
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            className="flex-1"
           >
             <Link
               to="/all-events"
