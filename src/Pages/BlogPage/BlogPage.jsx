@@ -106,7 +106,7 @@ const BlogPage = () => {
                   </div>
                   <Link 
                     to={`/blogs/${featuredPost.slug}`}
-                    className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                    className="w-[220px] flex justify-center items-center p-2 rounded-2xl text-white bg-blue-500"
                   >
                     Read Featured Article
                     <FaArrowRight className="h-4 w-4 ml-2" />
@@ -118,7 +118,7 @@ const BlogPage = () => {
         )}
 
         {/* Blog Posts Grid */}
-        <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -216,13 +216,6 @@ const BlogPage = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-all duration-300 shadow-md cursor-pointer"
-          >
-            View All Articles
-          </motion.button>
         </motion.div>
       </div>
     </section>

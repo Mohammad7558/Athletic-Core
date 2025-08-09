@@ -137,7 +137,7 @@ const SportsBlogSection = () => {
             whileTap={{ scale: 0.98 }}
             className="px-5 py-2.5 border border-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 shadow-sm cursor-pointer mt-5"
           >
-            View All Articles
+            <Link to='/blogs'>View All Articles</Link>
           </motion.button>
         </motion.div>
       </div>
