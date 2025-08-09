@@ -45,7 +45,7 @@ const FAQSection = () => {
 
   return (
     <div className="bg-gray-100 py-32 px-4 sm:px-6 lg:px-8 text-black">
-      <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto">
         {/* Heading */}
         <motion.div
           initial="hidden"

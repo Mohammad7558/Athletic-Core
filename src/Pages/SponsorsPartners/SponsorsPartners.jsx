@@ -82,7 +82,7 @@ const SponsorsPartners = () => {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto lg:px-0 px-6">
         {/* Section Title with Blur Animation on Scroll */}
         <motion.div
           initial="hidden"
