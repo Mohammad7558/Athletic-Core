@@ -60,7 +60,7 @@ const Login = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="py-10 px-20 flex flex-col justify-center"
+          className="py-10 lg:px-20 flex flex-col justify-center px-7"
         >
           <h2 className="text-3xl font-bold mb-2 text-black">Welcome back!</h2>
           <p className="text-sm text-gray-500 mb-8">
